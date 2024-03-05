@@ -1,0 +1,122 @@
+*{margin: 0;padding: 0;box-sizing: border-box;transition: all 0.4s ease;}
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: lightblue;
+  padding: 0 30px;
+  min-height: 100vh;
+  width: 100%;
+  position: relative; 
+  z-index: 1;
+  transition: all 5s;
+}
+section.dark{
+  background: #3E3157;
+}
+section .container{
+  height: 220px;
+  max-width: 560px;
+  width: 100%;
+  background: #dbd809;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  position: relative;
+}
+section.dark .container{
+  background: #5E14CC;
+}
+section .container .icons i{
+  background: #24292D;
+  color: #cccf0d;
+  text-align: center;
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  height: 33px;
+  width: 33px;
+  line-height: 33px;
+  border-radius: 55%;
+  font-size: 16px;
+  cursor: pointer;
+}
+section.dark .container .icons i{
+  background: #24292D;
+  color: #cccf0d;
+}
+.container .icons i.fa-sun{
+  pointer-events: none;
+  opacity: 0;
+}
+section.dark .container .icons i.fa-sun{
+  pointer-events: auto;
+  font-size: 18px;
+  opacity: 1;
+}
+section .container .time{
+  display: flex;
+  align-items: center;
+}
+.container .time .time-colon{
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.time .time-colon .am_pm{
+  top: 0;
+  right: -55px;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  position: absolute;
+}
+section.dark .time .time-colon .am_pm{
+  color: #cccf0d;
+}
+.time .time-colon .time-text{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(148, 235, 235);
+  height: 100px;
+  width: 100px;
+  border-radius: 40px;
+  box-shadow: 0 7px 14spx rgba(0, 0, 0, 0.2);
+}
+section.dark .time .time-colon .time-text{
+  background: #24292D;
+}
+.time .time-colon .time-text,
+.time .time-colon .colon{
+  font-size: 40px;
+  font-weight: 500;
+}
+section.dark .time .time-text .num,
+section.dark .time .colon{
+  color: #cccf0d;
+}
+.time .time-colon .colon{
+  font-size: 40px;
+  margin: 0 15px;
+}
+.time .time-colon .time-text .text{
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+section.dark  .time .time-colon .text{
+  color: #cccf0d;
+}
+canvas {  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
